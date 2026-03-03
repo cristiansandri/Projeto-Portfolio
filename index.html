@@ -1,32 +1,99 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Aula | Portfólio</title>
 </head>
 
+
+<!-- Header menu -->
 
 <body>
     <nav class="navegacao">
         <ul class="menu">
             <li>
-                <a>Início</a>
+                <a href="#inicio">Início</a>
             </li>
             <li>
-                <a>Sobre</a>
+                <a href="#sobre">Sobre</a>
             </li>
             <li>
-                <a>Projetos</a>
+                <a href="#projetos">Projetos</a>
             </li>
             <li>
-                <a>Contato/a>
+                <a href="#contato">Contato</a>
             </li>
         </ul>
-
     </nav>
-    
+
+
+    <!-- Seção principal -->
+
+    <main id="inicio" class="cabecalho">
+        <div>
+            <img src="./img/DSC_0085-2.JPG" alt="Foto de Cristian Sandri">
+            <h1>Cristian Sandri </h1>
+            <p> Desenvolvedor, Designer Gráfico</p>
+        </div>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam magnam impedit
+                reiciendis, ad error mollitia, voluptas commodi fugit amet, rerum iusto sapiente neque? Suscipit, quia
+                impedit expedita provident eligendi deleniti?
+            </p>
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+
+            <div class="projetos-card">
+                <img src="./img/projeto1.png" alt="Projeto 1" class="projetos-imagem">
+                <h3 class="info-projetos">Projeto Exemplo 1</h3>
+                <p class="paragrafo-projetos">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis itaque
+                    doloremque recusandae molestias molestiae quam facilis iure amet quisquam.</p>
+            </div>
+
+            <div class="projetos-card">
+                <img src="./img/projeto2.png" alt="Projeto 2" class="projetos-imagem">
+                <h3 class="info-projetos">Projeto Exemplo 2</h3>
+                <p class="paragrafo-projetos">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis itaque
+                    doloremque recusandae molestias molestiae quam facilis iure amet quisquam.</p>
+            </div>
+
+            <div class="projetos-card">
+                <img src="./img/projeto3.png" alt="Projeto 3" class="projetos-imagem">
+                <h3 class="info-projetos">Projeto Exemplo 3</h3>
+                <p class="paragrafo-projetos">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis itaque
+                    doloremque recusandae molestias molestiae quam facilis iure amet quisquam.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Contatos</h2>
+        <form class="formulario-contato" id="formulario">
+            <div>
+                <input placeholder="Nome" class="campo-form">
+            </div>
+
+            <div>
+                <textarea class="text-form"  placeholder="Digite sua Mensagem"></textarea>
+            </div>
+            <div>
+                <button class="botao-mensagem" onclick='enviar-mensagem'>Mensagem no Whatsapp</button>
+            </div>
+        </form>
+    </section>
+
 </body>
-
-
 </html>
