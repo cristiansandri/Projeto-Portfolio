@@ -161,10 +161,52 @@ h1 {
 }
 
 .info-projetos{
+    color: rgba(226, 232, 240, 0.8);
+    line-height: 1.25rem;
+}
 
+.caixa-textos-projeto{
+    padding: 1.5rem;
 }
 
 .paragrafo-projetos{
-
+    margin-bottom: 5px;
 }
 
+.contatos{
+    padding: 6rem 2rem;
+}
+
+.contatos-titulo{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.formulario-contato{
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+    border: 1px solid var(--vidro);
+    border-radius: 15px;
+}
+
+.campo-form{
+    width:100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    color: var(--claro);
+    border: 1px solid var(var(--vidro));
+    outline: none;
+}
+
+.grupo-form{
+    margin-bottom: 1.5rem;
+}
+
+botao-mensagem{
+
+}
