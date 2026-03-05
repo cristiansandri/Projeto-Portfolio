@@ -1,4 +1,10 @@
-//Adicionar função de arrastar com mouse e noo mobile, alem de arrumar a animação para ir no smooth
+//Adicionar função de arrastar com mouse e no mobile, esconder os botões e arrastar com touch. Função de animação de rolagem a cada 5 segundos.
+
+// Fazer o card levar para um link externo ou abrir popup a depender do tipo
+
+// Adicionar pequenos icones indicando as ferramentas usadas para construir o objeto em questão
+
+// Quando isso tudo estiver pronto, mudar o estilo da página
 
 function moverCarrossel(direcao){
     const carrossel = document.getElementById("carrossel");
