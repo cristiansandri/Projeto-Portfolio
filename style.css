@@ -192,18 +192,10 @@ h1 {
     margin: 0 auto;
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 2%, black 98%, transparent 100%);
     mask-image: linear-gradient(to left, transparent 0%, black 2%, black 98%, transparent 100%);
-    cursor: grab;
-    touch-action: pan-x;
+    cursor: pointer;
     scrollbar-width: none;
-}
-
-.projetos-caixa * {
-    pointer-events: none;
-}
-
-.projetos-caixa.dragging {
-    cursor: grabbing;
-    scroll-behavior: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 20px;
 }
 
 
@@ -211,12 +203,15 @@ h1 {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     backdrop-filter: blur(5px);
-    border: 1p solid var(--vidro);
+    border: 1px solid var(--vidro);
     overflow-x: auto;
     overflow-y: hidden;
     transition: all 0.5s ease;
-    min-width: calc(33.333% - 1.3rem);
+    min-width: calc(33% - 1.3rem);
     user-select: none;
+    pointer-events: auto;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
 
 @media (max-width: 900px){
