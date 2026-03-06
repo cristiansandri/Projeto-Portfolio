@@ -1,13 +1,9 @@
-//Adicionar função de arrastar com mouse e no mobile, esconder os botões e arrastar com touch. Função de animação de rolagem a cada 5 segundos.
-
-// Fazer o card levar para um link externo ou abrir popup a depender do tipo
-
-// Adicionar pequenos icones indicando as ferramentas usadas para construir o objeto em questão
-// Quando isso tudo estiver pronto, mudar o estilo da página
+//Adicionar função de esconder os botões no mobile talvez.
+// Fazer o card levar para um link externo nos sites e projetos ou abrir popup nos de design 
 
 
 
-// ==================== AUTOPLAY CARROSSEL ====================
+// ==================== AUTOPLAY CARROSSEL ==================== //
 let indiceAtual = 0;
 let intervaloAutoPlay;
 
@@ -43,7 +39,8 @@ function iniciarAutoPlay() {
     }, 5000);
 }
 
-// ==================== PAUSA AO ARRASTAR ====================
+
+// ==================== PAUSA AO ARRASTAR ==================== //
 const projetosCaixa = document.querySelector(".projetos-caixa");
 
 let arrastando = false;
@@ -88,7 +85,7 @@ projetosCaixa.addEventListener("pointercancel", () => {
 
 
 
-// ==================== BOTÕES MANUAIS ====================
+// ==================== BOTÕES MANUAIS ==================== //
 function moverCarrossel(direcao) {
     const carrossel = document.getElementById("carrossel");
     const card = carrossel.querySelector(".projetos-card");
@@ -104,9 +101,32 @@ function moverCarrossel(direcao) {
     });
 }
 
+// ==================== Popup ==================== //
+
+const openButtons = document.querySelectorAll('[data-modal]');
+openButtons.forEach(button =>{
+    button.addEventListener('click', () => {
+        const modalId = button.getAttribute('data-modal');
+        const modal = document.getElementById(modalId);
+
+        console.log(modalId);
+
+    });
+});
 
 
-// ==================== FORMULÁRIO ====================
+const closeButtons = document.querySelectorAll('.close-modal');
+closeButtons.forEach(button =>{
+    button.addEventListener('click', () => {
+        const modalId = button.getAttribute('data-modal');
+        const modal = document.getElementById(modalId);
+
+        modal.close();
+
+    });
+});
+
+// ==================== FORMULÁRIO ==================== //
 function enviarMensagem(event) {
     event.preventDefault()
 

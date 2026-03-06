@@ -97,7 +97,7 @@ h1 {
 
 
 
-/* Aba Sobre */
+/* ============== Aba Sobre ============== */
 
 .sobre {
     padding: 6rem 2rem;
@@ -128,7 +128,7 @@ h1 {
 
 
 
-/* Carrossel e botões - ocultar botoes em telas mobile, estilizar melhor os botoes */
+/* ============== Carrossel e botões ============== */
 .carrossel{
     position: relative;
     max-width: 1200px;
@@ -169,7 +169,8 @@ h1 {
 
 
 
-/* Cards Projetos */
+
+/* ============== Cards Projetos ============== */
 .projetos {
     padding: 6rem 2rem;
 }
@@ -197,7 +198,6 @@ h1 {
     scroll-snap-type: x mandatory;
     scroll-padding: 20px;
 }
-
 
 .projetos-card {
     background: rgba(255, 255, 255, 0.05);
@@ -254,7 +254,7 @@ h1 {
 
 
 
-/* Formulário de contato */
+/* ============== Formulário de contato ============== */
 .contatos {
     padding: 6rem 2rem;
     margin-bottom: 30px;

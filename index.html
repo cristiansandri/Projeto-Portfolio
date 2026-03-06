@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
     <title>Aula | Portfólio</title>
 </head>
 
@@ -35,6 +35,7 @@
     </nav>
 
 
+
     <!-- Seção principal -->
 
     <main id="inicio" class="cabecalho">
@@ -42,6 +43,7 @@
         <h1>Cristian Sandri </h1>
         <p class="cabecalho-subtitulo">Desenvolvedor, Designer Gráfico</p>
     </main>
+
 
     <!-- Seção sobre -->
 
@@ -56,29 +58,29 @@
     </section>
 
 
-    <!-- Projetos Programação / adicionar icones mostrando softwares usados / adicionar rolagem para mais cards: LP Ação Revisional, Calculadoras-->
+    <!-- Projetos Programação -->
+    <!-- Atividades: Adicionar iconezinhos mostrando softwares usados, adicionar rolagem para mais cards -->
 
     <section id="projetos" class="projetos">
         <h2 class="projetos-titulo">Projetos Profissionais</h2>
 
         <div class="carrossel">
-            
+
             <button onclick="moverCarrossel(-1)" class="btn-carrossel antes">◂</button>
 
             <div class="projetos-caixa" id="carrossel">
-                <a style="text-decoration: none; color: inherit;" href="https://www.google.com">
-                <div class="projetos-card" >
-                    
-                    <img src="./img/projeto1.png" alt="Projeto 1" class="projetos-imagem">
-                    <div class="caixa-textos-projeto">
-                        <h3 class="info-projetos">Projeto 0</h3>
-                        <p class="paragrafo-projetos">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis
-                            itaque doloremque recusandae molestias molestiae quam facilis iure amet quisquam.</p>
-                    </div></a>
-                </div>
+                    <div class="projetos-card">
+                        <img src="./img/projeto1.png" alt="Projeto 1" class="projetos-imagem">
+                        <div class="caixa-textos-projeto">
+                            <h3 class="info-projetos">Projeto 0</h3>
+                            <p class="paragrafo-projetos">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Corporis
+                                itaque doloremque recusandae molestias molestiae quam facilis iure amet quisquam.</p>
+                        </div>
+                    </div>
 
-                <div class="projetos-card">
-                    <img src="./img/projeto1.png" alt="Projeto 1" class="projetos-imagem">
+                <div class="projetos-card" data-modal="modal-1">
+                    <img src="./img/projeto2.png" alt="Projeto 1" class="projetos-imagem">
                     <div class="caixa-textos-projeto">
                         <h3 class="info-projetos">Projeto 1</h3>
                         <p class="paragrafo-projetos">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis
@@ -87,7 +89,7 @@
                 </div>
 
                 <div class="projetos-card">
-                    <img src="./img/projeto1.png" alt="Projeto 1" class="projetos-imagem">
+                    <img src="./img/projeto3.png" alt="Projeto 1" class="projetos-imagem">
                     <div class="caixa-textos-projeto">
                         <h3 class="info-projetos">Projeto 2</h3>
                         <p class="paragrafo-projetos">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis
@@ -96,7 +98,7 @@
                 </div>
 
                 <div class="projetos-card">
-                    <img src="./img/projeto2.png" alt="Projeto 2" class="projetos-imagem">
+                    <img src="./img/projeto1.png" alt="Projeto 2" class="projetos-imagem">
                     <div class="caixa-textos-projeto">
                         <h3 class="info-projetos">Projeto 3</h3>
                         <p class="paragrafo-projetos">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis
@@ -105,25 +107,34 @@
                 </div>
 
                 <div class="projetos-card">
-                    <img src="./img/projeto3.png" alt="Projeto 3" class="projetos-imagem">
+                    <img src="./img/projeto2.png" alt="Projeto 3" class="projetos-imagem">
                     <div class="caixa-textos-projeto">
-                        <h3 class="info-projetos">Projeto 3</h3>
+                        <h3 class="info-projetos">Projeto 4</h3>
                         <p class="paragrafo-projetos">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis
                             itaque doloremque recusandae molestias molestiae quam facilis iure amet quisquam.</p>
                     </div>
-
                 </div>
-
             </div>
             <button onclick="moverCarrossel(1)" class="btn-carrossel prox">▸</button>
         </div>
+        </div>
     </section>
+    <!-- Design Gráfico e Criação de ID Visual-->
+    <!-- Projetos de Estudo, o que estou aprendendo nos cursos e ferramentas -->
 
+    <!-- Implementação dos PopUps-->
+    <div>
+        <button class="open-modal" data-modal="modal-1">
+            Open modal 1
+        </button>
 
-    <!-- Design Gráfico e Criação / + mf advogados, ibex mkt,  ju nevs nails, matheus bll, etc-->
-
-
-    <!-- Projetos de Estudo ,oq to aprendendo nos cursose ferramentas -->
+        <dialog id="modal-1">
+            <h1>Teste 1</h1>
+            <button class="close-modal" data-modal="modal-1" type="button">
+                <i class="fa-solid fa-x"></i>
+            </button>
+        </dialog>
+    </div>
 
 
     <!-- Formulário de contato -->
@@ -143,7 +154,7 @@
         </form>
     </section>
 
-
+    <script src="app.js"></script>
 </body>
 
 </html>
