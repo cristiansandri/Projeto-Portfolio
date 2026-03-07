@@ -33,8 +33,6 @@ function iniciarAutoPlay() {
             left: posicaoScroll,
             behavior: "smooth"
         });
-
-        console.log(`🔄 Card ${indiceAtual + 1}/${cards.length}`);
     }, 5000);
 }
 
@@ -45,6 +43,7 @@ let arrastando = false;
 let posicaoInicialX;
 let scrollInicial;
 let deslocamentoTotal = 0;
+let THRESHOLD_ARRASTO= 5;
 
 projetosCaixa.addEventListener("pointerdown", (evento) => {
     arrastando = true;
@@ -114,7 +113,8 @@ closeButtons.forEach(button =>{
     button.addEventListener('click', () => {
         const modalId = button.getAttribute('data-modal');
         const modal = document.getElementById(modalId);
-
+        
+        console.log(modalId);
         modal.close();
 
     });

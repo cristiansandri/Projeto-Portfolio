@@ -90,6 +90,20 @@ h1 {
 
 }
 
+h2 {
+    font-size: 1rem;
+    color: var(--claro);
+    margin: 5px;
+}
+
+p {
+    font-size: 1rem;
+    color: var(--claro);
+    font-weight: lighter;
+    font-weight: bold;
+    margin: 5px;
+}
+
 .cabecalho-subtitulo {
     font-size: 1.1rem;
     color: var(--claro);
@@ -216,7 +230,9 @@ h1 {
 
 .projetos-card a,
 .projetos-card img {
-    -webkit-user-drag: none; user-drag: none;
+    -webkit-user-drag: none;
+    text-decoration: none;
+    color: inherit;
 }
 
 @media (max-width: 900px){
@@ -258,6 +274,134 @@ h1 {
     margin-bottom: 5px;
 }
 
+
+
+/* ============== Popup Projetos ============== */
+
+.popup-caixa{
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 550px;
+    max-width: 1200px;
+    background-color: #0f172a;
+    border: 1px solid var(--vidro);
+    box-sizing: border-box;
+}
+
+.popup-caixa::backdrop{
+    color: rgba(255, 255, 255);
+}
+
+.close-modal {
+    position: absolute;
+    top: -5%;
+    left: 95%;
+    border-radius: 16px;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+    background: rgba(175, 13, 13, 0.514);
+    color: var(--claro);
+    font-size: 15px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    margin: 0px;
+    transition: all 0.2s ease;
+}
+
+.close-modal:hover{
+    scale: 120%;
+    background: rgba(223, 17, 17, 0.747);
+    color: var(--claro);
+}
+
+.popup-esquerda {
+    width: 65%;
+    position: relative;
+    background-color: #0f172a;
+    display: flex;
+    align-items: center;
+}
+
+.popup-carrossel-track-container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.popup-carrossel-track{
+    display:flex;
+    height: 100%;
+    padding: 0;
+    list-style: none;
+    transition: transform 0.4s ease-in-out;
+}
+
+.popup-carrossel-slide{
+    min-width: 100%;
+    height: 100%;
+}
+
+.popup-carrossel-slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.popup-direita{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--vidro);
+}
+
+
+.direita-metade-superior{
+    padding: 20px 20px 10px 20px;
+}
+
+.softwares-titulo{
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.software-icons{
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.icon-software{
+    color:#e2e8f0
+}
+
+.direita-metade-inferior{
+    padding: 15px 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.direita-metade-inferior p{
+    font-size: 13px;
+    line-height: 1.5;
+    margin-top: 0;
+}
+
+.direita-metade-inferior::-webkit-scrollbar{
+    width: 6px;
+}
+
+.direita-metade-inferior::-webkit-scrollbar-thumb{
+    background-color: #e2e8f0;
+}
 
 
 /* ============== Formulário de contato ============== */
