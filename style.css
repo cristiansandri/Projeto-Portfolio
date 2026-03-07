@@ -15,6 +15,7 @@ html {
     --escuro: #0f172a;
     --maisescuro: #0a0f1c;
     --claro: #e2e8f0;
+    --quaseclaro: #e2e8f0dc;
     --vidro: rgba(255, 255, 255, 0.1)
 }
 
@@ -92,7 +93,7 @@ h1 {
 
 h2 {
     font-size: 1rem;
-    color: var(--claro);
+    color: var(--quaseclaro);
     margin: 5px;
 }
 
@@ -292,9 +293,7 @@ p {
     box-sizing: border-box;
 }
 
-.popup-caixa::backdrop{
-    color: rgba(255, 255, 255);
-}
+
 
 .close-modal {
     position: absolute;
@@ -306,7 +305,7 @@ p {
     background: rgba(175, 13, 13, 0.514);
     color: var(--claro);
     font-size: 15px;
-    padding: 10px;
+    padding: 10px 12px;
     cursor: pointer;
     z-index: 10;
     border-radius: 50%;
@@ -376,11 +375,12 @@ p {
     display: flex;
     justify-content: left;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 13px;
 }
 
 .icon-software{
-    color:#e2e8f0
+    color:#e2e8f0;
+    font-size: 25px;
 }
 
 .direita-metade-inferior{
