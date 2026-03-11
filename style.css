@@ -106,6 +106,12 @@ h3 {
     margin: 5px;
     font-weight: lighter;
 }
+h4 {
+    font-size: 1rem;
+    color: #181818;
+    margin: 5px;
+    font-weight: bold;
+}
 
 p {
     font-size: 0.9rem;
@@ -305,9 +311,11 @@ dialog::backdrop {
 
 
 .close-modal {
-    position: absolute;
+    display: block;
+    position: fixed;
     top: -10%;
     left: 85%;
+    margin-right: 300px;
     border-radius: 16px;
     border: 1px solid var(--vidro);
     backdrop-filter: blur(10px);
@@ -315,12 +323,11 @@ dialog::backdrop {
     color: var(--claro);
     font-size: 15px;
     padding: 10px;
-    display: block;
     cursor: pointer;
     z-index: 10;
     border-radius: 15px 15px 15px 0px;
     margin: 0px;
-    transition: all 0.2s ease;
+    transition: all 0.1s ease;
 }
 
 .close-modal:hover {
@@ -457,6 +464,17 @@ dialog::backdrop {
     background-color: #e2e8f0;
 }
 
+.btn-acessar{
+    border-radius: 20px;
+    margin: 20px;
+    background-color: #e2e8f0;
+    transition: all ease 0.2s;
+}
+
+.btn-acessar:hover{
+    scale: 102%;
+    cursor: pointer;
+}
 
 /* ============== Formulário de contato ============== */
 .contatos {

@@ -1,100 +1,90 @@
 // ==================== NOTAS ==================== //
 
- 
-
 // ==================== AUTOPLAY CARROSSEL ==================== //
-let indiceAtual = 0;
-let intervaloAutoPlay;
+const todosCarrosseis = document.querySelectorAll(".projetos-caixa");
 
-window.addEventListener("load", () => {
-    iniciarAutoPlay();
-});
+todosCarrosseis.forEach((carrossel) => {
+    let indiceAtual = 0;
+    let intervaloAutoPlay;
+    let arrastando = false;
+    let posicaoInicialX;
+    let scrollInicial;
+    let deslocamentoTotal = 0;
+    let THRESHOLD_ARRASTO = 5;
 
-function iniciarAutoPlay() {
-    const projetosCaixa = document.querySelector(".projetos-caixa");
-    const cards = document.querySelectorAll(".projetos-card");
+    function iniciarAutoPlay() {
+        const cards = carrossel.querySelectorAll(".projetos-card");
+        if (cards.length === 0) return;
 
-    if (cards.length === 0) return;
+        clearInterval(intervaloAutoPlay);
 
-    intervaloAutoPlay = setInterval(() => {
-        indiceAtual++;
+        intervaloAutoPlay = setInterval(() => {
+            indiceAtual++;
 
-        if (indiceAtual >= cards.length) {
-            indiceAtual = 0;
-        }
+            if (indiceAtual >= cards.length) {
+                indiceAtual = 0;
+            }
 
-        const card = cards[indiceAtual];
-        const estilo = window.getComputedStyle(projetosCaixa);
-        const gap = parseInt(estilo.gap) || 0;
+            const card = cards[indiceAtual];
+            const posicaoScroll = card.offsetLeft - (carrossel.offsetWidth / 2) + (card.offsetWidth / 2);
 
-        const posicaoScroll = card.offsetLeft - (projetosCaixa.offsetWidth / 2) + (card.offsetWidth / 2);
-
-        projetosCaixa.scrollTo({
-            left: posicaoScroll,
-            behavior: "smooth"
-        });
-    }, 10000);
-}
-
-
-
-// ==================== PAUSA AO ARRASTAR ==================== //
-const projetosCaixa = document.querySelector(".projetos-caixa");
-
-let arrastando = false;
-let posicaoInicialX;
-let scrollInicial;
-let deslocamentoTotal = 0;
-let THRESHOLD_ARRASTO = 5;
-
-projetosCaixa.addEventListener("pointerdown", (evento) => {
-    arrastando = true;
-    projetosCaixa.classList.add("dragging");
-
-    posicaoInicialX = evento.pageX;
-    scrollInicial = projetosCaixa.scrollLeft;
-    deslocamentoTotal = 0;
-
-    clearInterval(intervaloAutoPlay);
-});
-
-projetosCaixa.addEventListener("pointermove", (evento) => {
-    if (!arrastando) return;
-
-    evento.preventDefault();
-
-    const posicaoAtualX = evento.pageX;
-    deslocamentoTotal = Math.abs(posicaoAtualX - posicaoInicialX);
-
-    const deslocamento = (posicaoAtualX - posicaoInicialX) * 1.5;
-
-    projetosCaixa.scrollLeft = scrollInicial - deslocamento;
-});
-
-document.addEventListener("pointerup", () => {
-    if (arrastando) {
-        arrastando = false;
-        projetosCaixa.classList.remove("dragging");
-        iniciarAutoPlay();
+            carrossel.scrollTo({
+                left: posicaoScroll,
+                behavior: "smooth"
+            });
+        }, 10000);
     }
-});
 
-projetosCaixa.addEventListener("pointercancel", () => {
-    arrastando = false;
-    projetosCaixa.classList.remove("dragging");
-    iniciarAutoPlay();
-});
+    window.addEventListener("load", iniciarAutoPlay);
 
+    // ==================== PAUSA AO ARRASTAR ==================== //
+    carrossel.addEventListener("pointerdown", (evento) => {
+        clearInterval(intervaloAutoPlay);
+        arrastando = true;
+        carrossel.classList.add("dragging");
 
+        posicaoInicialX = evento.pageX;
+        scrollInicial = carrossel.scrollLeft;
+        deslocamentoTotal = 0;
+    });
 
+    carrossel.addEventListener("pointermove", (evento) => {
+        if (!arrastando) return;
 
-// ======== PERMITIR CLIQUE APENAS SE NÃO HOUVE ARRASTO =========== //
-projetosCaixa.addEventListener("click", (evento) => {
-    if (deslocamentoTotal > THRESHOLD_ARRASTO) {
         evento.preventDefault();
-        evento.stopPropagation();
+
+        const posicaoAtualX = evento.pageX;
+        deslocamentoTotal = Math.abs(posicaoAtualX - posicaoInicialX);
+
+        const deslocamento = (posicaoAtualX - posicaoInicialX) * 1.5;
+
+        carrossel.scrollLeft = scrollInicial - deslocamento;
+    });
+
+    const finalizarArraste = () => {
+        if (arrastando) {
+            arrastando = false;
+            carrossel.classList.remove("dragging");
+            iniciarAutoPlay();
+        }
     }
-}, { capture: true });
+
+
+    carrossel.addEventListener("pointerup", finalizarArraste);
+    carrossel.addEventListener("pointercancel", finalizarArraste);
+    carrossel.addEventListener("pointerleave", finalizarArraste);
+
+
+
+    // ======== PERMITIR CLIQUE APENAS SE NÃO HOUVE ARRASTO =========== //
+    carrossel.addEventListener("click", (evento) => {
+        if (deslocamentoTotal > THRESHOLD_ARRASTO) {
+            evento.preventDefault();
+            evento.stopPropagation();
+        }
+    }, { capture: true });
+
+});
 
 
 
@@ -116,17 +106,18 @@ openButtons.forEach(button => {
 const closeButtons = document.querySelectorAll('.close-modal');
 closeButtons.forEach(button => {
     button.addEventListener('click', () => {
-        const modalId = button.getAttribute('data-modal');
-        const modal = document.getElementById(modalId);
-        if (modal) modal.close();
-        document.body.classList.remove('sem-scroll');
+        const modal = button.closest('dialog');
+        if (modal) {
+            modal.close();
+            document.body.classList.remove('sem-scroll');
+        };
     });
 });
 
 const modais = document.querySelectorAll('dialog');
 modais.forEach(modal => {
     modal.addEventListener('click', (event) => {
-        if (event.target ===modal) {
+        if (event.target === modal) {
             modal.close();
             document.body.classList.remove('sem-scroll');
         }
@@ -180,8 +171,8 @@ function iniciarCarrossel(modalAtual) {
 
 
 // ==================== BOTÕES MANUAIS ==================== //
-function moverCarrossel(direcao) {
-    const carrossel = document.getElementById("carrossel");
+function moverCarrossel(direcao, idCarrossel) {
+    const carrossel = document.getElementById(idCarrossel);
     const card = carrossel.querySelector(".projetos-card");
 
     const estilo = window.getComputedStyle(carrossel);

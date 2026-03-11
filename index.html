@@ -62,6 +62,11 @@
 
 
 
+
+
+
+
+
     <!-- Projetos Programação: 
 - Landing Page Tecnoart (wp e elem.),
 - Site Ibex (wp e elem.),
@@ -72,24 +77,22 @@
     <!-- Atividades: Adicionar iconezinhos coloridos mostrando softwares usados no card -->
 
     <section id="projetos" class="projetos">
-        <h2 class="projetos-titulo">Web Design e Desenvolvimento</h2>
+        <h2 class="projetos-titulo">Programação e Web Design</h2>
 
         <div class="carrossel">
 
-            <button onclick="moverCarrossel(-1)" class="btn-carrossel antes"><img src="./img/btn-esq.webp"></button>
+            <button onclick="moverCarrossel(-1, 'carrossel-1')" class="btn-carrossel antes"><img
+                    src="./img/btn-esq.webp"></button>
 
-            <div class="projetos-caixa" id="carrossel">
+            <div class="projetos-caixa" id="carrossel-1">
 
-                <div class="projetos-card">
-                    <a href="https://www.google.com" target="_blank rel" noopener noreferrer>
-
-                        <img src="./img/projeto1.png" alt="Projeto 1" class="projetos-imagem">
-                        <div class="caixa-textos-projeto">
-                            <h2 class="info-projetos">Landing Page Tecnoart</h2>
-                            <p class="paragrafo-projetos">Desenvolvimento de Landing Page para o curso Monete seu PC, do
-                                canal Tecnoart. Reformulação geral da página feita com Wordpress + Elementor.</p>
-                        </div>
-                    </a>
+                <div class="projetos-card open-modal" data-modal="CursoPC">
+                    <img src="projetos/MontarPc1.webp" alt="Projeto 1" class="projetos-imagem">
+                    <div class="caixa-textos-projeto">
+                        <h2 class="info-projetos">Landing Page Curso Monte seu PC</h2>
+                        <p class="paragrafo-projetos">Desenvolvimento de Landing Page para o curso Monte seu PC, do
+                            canal Tecnoart. Reformulação geral da página feita com Wordpress + Elementor.</p>
+                    </div>
                 </div>
 
                 <div class="projetos-card open-modal" data-modal="modal-1">
@@ -122,137 +125,143 @@
                     </div>
                 </div>
             </div>
-            <button onclick="moverCarrossel(1)" class="btn-carrossel prox"><img src="./img/btn-dir.webp"></button>
+            <button onclick="moverCarrossel(1, 'carrossel-1'), 'carrossel-1'" class="btn-carrossel prox"><img
+                    src="./img/btn-dir.webp"></button>
         </div>
         </div>
     </section>
 
-    <!-- Design Gráfico e Criação de ID Visual
-- Id Visual Neuropsike ok
-- Id Visual Mateus Bellaver ok
-- Id Visual Monakhus
-- Id Visual Centro Equestre Rancho Feliz
-- Id Visual Curso Venda Facil Tecnoart
-- Id Visual Ju Neves
-- Id Visual MF Advogados
-- Id Visual Verit
-- Ix VIsual Ibex Marketing
-
--->
 
 
+
+
+
+    
+
+
+
+
+    <!-- Design Gráfico e Criação de ID Visual-->
     <section id="projetos" class="projetos">
         <h2 class="projetos-titulo">Design Gráfico</h2>
 
         <div class="carrossel">
 
-            <button onclick="moverCarrossel(-1)" class="btn-carrossel antes"><img src="./img/btn-esq.webp"></button>
+            <button onclick="moverCarrossel(-1, 'carrossel-2')" class="btn-carrossel antes"><img
+                    src="./img/btn-esq.webp"></button>
 
-            <div class="projetos-caixa" id="carrossel">
+            <div class="projetos-caixa" id="carrossel-2">
 
                 <div class="projetos-card open-modal" data-modal="modal-1">
                     <img src="./img/projeto2.png" alt="Projeto 1" class="projetos-imagem">
                     <div class="caixa-textos-projeto">
-                        <h2 class="info-projetos">Site Ibex Marketing</h2>
-                        <p class="paragrafo-projetos">Desenvolvimento de site institucional e portifólio para a agencia
-                            Ibex Marketing. Site feito com Wordpress + Elementor criado desde a hospedagem, apontamento
-                            de DNS e estruturação geral.</p>
+                        <h2 class="info-projetos">Neuropsike</h2>
+                        <p class="paragrafo-projetos">Criação de identidade visual, incluindo: Vetorização, materiais
+                            para impressão, papel timbrado, materiais de apoio, cartão de visita e modelos para social
+                            media.</p>
                     </div>
                 </div>
 
                 <div class="projetos-card open-modal" data-modal="modal-1">
                     <img src="./img/projeto2.png" alt="Projeto 1" class="projetos-imagem">
                     <div class="caixa-textos-projeto">
-                        <h2 class="info-projetos">Site Ibex Marketing</h2>
-                        <p class="paragrafo-projetos">Desenvolvimento de site institucional e portifólio para a agencia
-                            Ibex Marketing. Site feito com Wordpress + Elementor criado desde a hospedagem, apontamento
-                            de DNS e estruturação geral.</p>
+                        <h2 class="info-projetos">Mateus Bellaver Advocacia</h2>
+                        <p class="paragrafo-projetos">Criação de identidade visual, incluindo: Vetorização, materiais
+                            para impressão, papel timbrado, materiais de apoio, cartão de visita e modelos para social
+                            media.</p>
                     </div>
                 </div>
 
                 <div class="projetos-card open-modal" data-modal="modal-1">
                     <img src="./img/projeto2.png" alt="Projeto 1" class="projetos-imagem">
                     <div class="caixa-textos-projeto">
-                        <h2 class="info-projetos">Site Ibex Marketing</h2>
-                        <p class="paragrafo-projetos">Desenvolvimento de site institucional e portifólio para a agencia
-                            Ibex Marketing. Site feito com Wordpress + Elementor criado desde a hospedagem, apontamento
-                            de DNS e estruturação geral.</p>
+                        <h2 class="info-projetos">Monakhus Contabilidade</h2>
+                        <p class="paragrafo-projetos">Criação de identidade visual, incluindo: Vetorização, materiais
+                            para impressão, papel timbrado, materiais de apoio, cartão de visita e modelos para social
+                            media.</p>
                     </div>
                 </div>
 
                 <div class="projetos-card open-modal" data-modal="modal-1">
                     <img src="./img/projeto2.png" alt="Projeto 1" class="projetos-imagem">
                     <div class="caixa-textos-projeto">
-                        <h2 class="info-projetos">Site Ibex Marketing</h2>
-                        <p class="paragrafo-projetos">Desenvolvimento de site institucional e portifólio para a agencia
-                            Ibex Marketing. Site feito com Wordpress + Elementor criado desde a hospedagem, apontamento
-                            de DNS e estruturação geral.</p>
+                        <h2 class="info-projetos">Centro Equestre Rancho Feliz</h2>
+                        <p class="paragrafo-projetos">Criação de identidade visual, incluindo: Vetorização, materiais
+                            para impressão, papel timbrado, materiais de apoio, cartão de visita e modelos para social
+                            media.</p>
                     </div>
                 </div>
 
                 <div class="projetos-card open-modal" data-modal="modal-1">
                     <img src="./img/projeto2.png" alt="Projeto 1" class="projetos-imagem">
                     <div class="caixa-textos-projeto">
-                        <h2 class="info-projetos">Site Ibex Marketing</h2>
-                        <p class="paragrafo-projetos">Desenvolvimento de site institucional e portifólio para a agencia
-                            Ibex Marketing. Site feito com Wordpress + Elementor criado desde a hospedagem, apontamento
-                            de DNS e estruturação geral.</p>
+                        <h2 class="info-projetos">Curso Venda Facil Tecnoart</h2>
+                        <p class="paragrafo-projetos">Criação de identidade visual, incluindo: Vetorização, materiais
+                            para impressão, papel timbrado, materiais de apoio, cartão de visita e modelos para social
+                            media.</p>
                     </div>
                 </div>
 
                 <div class="projetos-card open-modal" data-modal="modal-1">
                     <img src="./img/projeto2.png" alt="Projeto 1" class="projetos-imagem">
                     <div class="caixa-textos-projeto">
-                        <h2 class="info-projetos">Site Ibex Marketing</h2>
-                        <p class="paragrafo-projetos">Desenvolvimento de site institucional e portifólio para a agencia
-                            Ibex Marketing. Site feito com Wordpress + Elementor criado desde a hospedagem, apontamento
-                            de DNS e estruturação geral.</p>
+                        <h2 class="info-projetos">Ju Neves Nail</h2>
+                        <p class="paragrafo-projetos">Criação de identidade visual, incluindo: Vetorização, materiais
+                            para impressão, papel timbrado, materiais de apoio, cartão de visita e modelos para social
+                            media.</p>
                     </div>
                 </div>
 
                 <div class="projetos-card open-modal" data-modal="modal-1">
                     <img src="./img/projeto2.png" alt="Projeto 1" class="projetos-imagem">
                     <div class="caixa-textos-projeto">
-                        <h2 class="info-projetos">Site Ibex Marketing</h2>
-                        <p class="paragrafo-projetos">Desenvolvimento de site institucional e portifólio para a agencia
-                            Ibex Marketing. Site feito com Wordpress + Elementor criado desde a hospedagem, apontamento
-                            de DNS e estruturação geral.</p>
+                        <h2 class="info-projetos">Id Visual Martins Felix Advogados</h2>
+                        <p class="paragrafo-projetos">Criação de identidade visual, incluindo: Vetorização, materiais
+                            para impressão, papel timbrado, materiais de apoio, cartão de visita e modelos para social
+                            media.</p>
                     </div>
                 </div>
 
                 <div class="projetos-card open-modal" data-modal="modal-1">
                     <img src="./img/projeto2.png" alt="Projeto 1" class="projetos-imagem">
                     <div class="caixa-textos-projeto">
-                        <h2 class="info-projetos">Site Ibex Marketing</h2>
-                        <p class="paragrafo-projetos">Desenvolvimento de site institucional e portifólio para a agencia
-                            Ibex Marketing. Site feito com Wordpress + Elementor criado desde a hospedagem, apontamento
-                            de DNS e estruturação geral.</p>
+                        <h2 class="info-projetos">Id Visual Verit Men Wear</h2>
+                        <p class="paragrafo-projetos">Criação de identidade visual, incluindo: Vetorização, materiais
+                            para impressão, papel timbrado, materiais de apoio, cartão de visita e modelos para social
+                            media.</p>
                     </div>
                 </div>
 
                 <div class="projetos-card open-modal" data-modal="modal-1">
                     <img src="./img/projeto2.png" alt="Projeto 1" class="projetos-imagem">
                     <div class="caixa-textos-projeto">
-                        <h2 class="info-projetos">Site Ibex Marketing</h2>
-                        <p class="paragrafo-projetos">Desenvolvimento de site institucional e portifólio para a agencia
-                            Ibex Marketing. Site feito com Wordpress + Elementor criado desde a hospedagem, apontamento
-                            de DNS e estruturação geral.</p>
+                        <h2 class="info-projetos">Id Visual Ibex Marketing</h2>
+                        <p class="paragrafo-projetos">Criação de identidade visual, incluindo: Vetorização, materiais
+                            para impressão, papel timbrado, materiais de apoio, cartão de visita e modelos para social
+                            media.</p>
                     </div>
                 </div>
             </div>
-            <button onclick="moverCarrossel(1)" class="btn-carrossel prox"><img src="./img/btn-dir.webp"></button>
+            <button onclick="moverCarrossel(1, 'carrossel-2')" class="btn-carrossel prox"><img
+                    src="./img/btn-dir.webp"></button>
         </div>
         </div>
     </section>
 
-    <!-- Projetos de Estudo, o que estou aprendendo nos cursos e ferramentas
-- Meu portifólio
-- Exercício: Sorteio de Números
-- Exercício: Página de Checkout
-- Ferramenta: Calculadora de Juros Compostos (extrair código e deploy)
-- Ferramenta: Calculadora de Redução de Dívidas (extrair código e deploy)
-- Ferramenta: Comprometimento de Renda (extrair código e deploy)
-- Ferramenta: Calculadora de Provisionamento Bancário (Redução de dívida)(extrair código e deploy)
+
+
+
+
+
+
+
+
+
+    <!-- Projetos de Estudo, o que estou aprendendo nos cursos e ferramentas (extrair código e fazer deploy de todos no github ou versel)
+- Ferramenta: Calculadora de Juros Compostos
+- Ferramenta: Calculadora de Redução de Dívidas
+- Ferramenta: Comprometimento de Renda 
+- Ferramenta: Calculadora de Provisionamento Bancário (Redução de dívida)
 -->
 
     <section id="projetos" class="projetos">
@@ -260,18 +269,19 @@
 
         <div class="carrossel">
 
-            <button onclick="moverCarrossel(-1)" class="btn-carrossel antes"><img src="./img/btn-esq.webp"></button>
+            <button onclick="moverCarrossel(-1, 'carrossel-3')" class="btn-carrossel antes"><img
+                    src="./img/btn-esq.webp"></button>
 
-            <div class="projetos-caixa" id="carrossel">
+            <div class="projetos-caixa" id="carrossel-3">
 
                 <div class="projetos-card">
                     <a href="https://www.google.com" target="_blank rel" noopener noreferrer>
 
                         <img src="./img/projeto1.png" alt="Projeto 1" class="projetos-imagem">
                         <div class="caixa-textos-projeto">
-                            <h2 class="info-projetos">Landing Page Tecnoart</h2>
-                            <p class="paragrafo-projetos">Descrição do que foi feito na Landing Page para o curso do
-                                Tecnoart </p>
+                            <h2 class="info-projetos">Portifólio</h2>
+                            <p class="paragrafo-projetos">Usei esse portifólio para reforçar varios de meus
+                                conhecimentos. Landing page feita totalmente com HTML, CSS e Javascript.</p>
                         </div>
                     </a>
                 </div>
@@ -279,50 +289,50 @@
                 <div class="projetos-card open-modal" data-modal="modal-1">
                     <img src="./img/projeto2.png" alt="Projeto 1" class="projetos-imagem">
                     <div class="caixa-textos-projeto">
-                        <h2 class="info-projetos">Popup</h2>
-                        <p class="paragrafo-projetos">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis
-                            itaque doloremque recusandae molestias molestiae quam facilis iure amet quisquam.</p>
+                        <h2 class="info-projetos">Sorteador de Números</h2>
+                        <p class="paragrafo-projetos">Projeto feito para praticar geração de numeros aleatórios,
+                            diferentes usos para funções dentro da lógica de programação.</p>
                     </div>
                 </div>
 
-                <div class="projetos-card">
+                <div class="projetos-card open-modal" data-modal="modal-1">
                     <img src="./img/projeto3.png" alt="Projeto 1" class="projetos-imagem">
                     <div class="caixa-textos-projeto">
-                        <h2 class="info-projetos">Projeto 2</h2>
-                        <p class="paragrafo-projetos">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis
-                            itaque doloremque recusandae molestias molestiae quam facilis iure amet quisquam.</p>
+                        <h2 class="info-projetos">Página Simples de Checkout</h2>
+                        <p class="paragrafo-projetos">Projeto feito para praticar listagem de itens, soma ded
+                            condicionais e funções dentro da lógica de programação.</p>
                     </div>
                 </div>
 
-                <div class="projetos-card">
+                <div class="projetos-card open-modal" data-modal="modal-1">
                     <img src="./img/projeto1.png" alt="Projeto 2" class="projetos-imagem">
                     <div class="caixa-textos-projeto">
-                        <h2 class="info-projetos">Projeto 3</h2>
-                        <p class="paragrafo-projetos">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis
-                            itaque doloremque recusandae molestias molestiae quam facilis iure amet quisquam.</p>
+                        <h2 class="info-projetos">Ferramenta: Calculadora de Juros Compostos</h2>
+                        <p class="paragrafo-projetos">Projeto feito para implementar em um site de um escritório de
+                            direito, usado para complementar o SEO e gerar cliques orgânicos na página.</p>
                     </div>
                 </div>
 
-                <div class="projetos-card">
+                <div class="projetos-card open-modal" data-modal="modal-1">
                     <img src="./img/projeto2.png" alt="Projeto 3" class="projetos-imagem">
                     <div class="caixa-textos-projeto">
-                        <h2 class="info-projetos">Projeto 4</h2>
-                        <p class="paragrafo-projetos">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis
-                            itaque doloremque recusandae molestias molestiae quam facilis iure amet quisquam.</p>
+                        <h2 class="info-projetos">Ferramenta: Calculadora de Redução de Dívidas </h2>
+                        <p class="paragrafo-projetos">Projeto feito para implementar em um site de um escritório de
+                            direito, usado para complementar o SEO e gerar cliques orgânicos na página.</p>
                     </div>
                 </div>
 
                 <div class="projetos-card open-modal" data-modal="modal-1">
                     <img src="./img/projeto2.png" alt="Projeto 1" class="projetos-imagem">
                     <div class="caixa-textos-projeto">
-                        <h2 class="info-projetos">Site Ibex Marketing</h2>
-                        <p class="paragrafo-projetos">Desenvolvimento de site institucional e portifólio para a agencia
-                            Ibex Marketing. Site feito com Wordpress + Elementor criado desde a hospedagem, apontamento
-                            de DNS e estruturação geral.</p>
+                        <h2 class="info-projetos">Ferramenta: Calculadora de Comprometimento de Renda</h2>
+                        <p class="paragrafo-projetos">Projeto feito para implementar em um site de um escritório de
+                            direito, usado para complementar o SEO e gerar cliques orgânicos na página.</p>
                     </div>
                 </div>
             </div>
-            <button onclick="moverCarrossel(1)" class="btn-carrossel prox"><img src="./img/btn-dir.webp"></button>
+            <button onclick="moverCarrossel(1, 'carrossel-3')" class="btn-carrossel prox"><img
+                    src="./img/btn-dir.webp"></button>
         </div>
         </div>
     </section>
@@ -330,23 +340,31 @@
 
 
 
+
+
+
+
+
+
+
+
     <!-- PopUps por projeto-->
-    <dialog id="modal-1">
+    <dialog id="CursoPC">
         <div class="popup-caixa">
             <div class="popup-esquerda">
                 <button class="btn-popup antes"><img src="./img/btn-esq.webp"></button>
                 <div class="popup-carrossel-track-container">
                     <ul class="popup-carrossel-track">
-                        <li class="popup-carrossel-slide"><img src="./img/projeto1.png" alt="Proj 1"></li>
-                        <li class="popup-carrossel-slide"><img src="./img/projeto2.png" alt="Proj 1"></li>
-                        <li class="popup-carrossel-slide"><img src="./img/projeto3.png" alt="Proj 1"></li>
+                        <li class="popup-carrossel-slide"><img src="projetos/MontarPc1.webp" alt="Proj 1"></li>
+                        <li class="popup-carrossel-slide"><img src="projetos/MontarPc2.webp" alt="Proj 1"></li>
+                        <li class="popup-carrossel-slide"><img src="projetos/MontarPc3.webp" alt="Proj 1"></li>
                     </ul>
                 </div>
                 <button class="btn-popup prox"><img src="./img/btn-dir.webp"></button>
             </div>
 
             <div class="popup-direita">
-                <button class="close-modal" data-modal="modal-1" type="button">
+                <button class="close-modal" type="button">
                     <i class="fa-solid fa-x"></i>
                 </button>
                 <div class="direita-metade-superior">
@@ -374,6 +392,11 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed lectus at ante egestas
                         rutrum.</p>
                 </div>
+                <button class="btn-acessar" type="button" onclick="window.open('https://www.example.com/', '_blank')">
+
+                    <h4>Acessar <i class="fa-solid fa-arrow-up-right-from-square"></i></h4>
+                </button>
+
             </div>
         </div>
     </dialog>
