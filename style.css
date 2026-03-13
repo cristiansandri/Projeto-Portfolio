@@ -449,18 +449,50 @@ dialog[open]::backdrop {
     justify-content: left;
     flex-wrap: wrap;
     gap: 5px;
+
 }
 
 .icon-software {
-    color: #e2e8f0;
-    font-size: 25px;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+.tooltip{
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    width: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.tooltip-text{
+    position: absulute;
+    bottom: 120%;
+    right: 100%;
+    
+    background: #000;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.2s;
+}
+
+.tooltip:hover .tooltip-text{
+    opacity: 1;
 }
 
 .direita-metade-inferior {
     padding: 15px 20px;
     flex-grow: 1;
     overflow-y: auto;
-    margin-bottom: 15px;
+    margin-top: -15px;
+    margin-bottom: 10px;
 }
 
 .direita-metade-inferior p {
@@ -479,7 +511,7 @@ dialog[open]::backdrop {
 
 .btn-acessar{
     border-radius: 20px;
-    margin: 20px;
+    margin: 20px ;
     background-color: #e2e8f0;
     transition: all ease 0.2s;
     padding: 5px;
