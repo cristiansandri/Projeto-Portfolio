@@ -20,10 +20,10 @@ html {
 }
 
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('img/fundo topografico.webp');
+    background-image: url('img/fundo topografico.webp');
     background-blend-mode: darken;
-    background-size: 100%;
-    background-repeat: repeat-y;
+    background-size: 1200px;
+    background-color: #111111;
 }
 
 .navegacao {
@@ -322,7 +322,7 @@ dialog[open]::backdrop {
 
 .close-modal {
     display: block;
-    position: fixed;
+    position: absolute;
     top: -10%;
     left: 85%;
     margin-right: 300px;
